@@ -12,6 +12,7 @@ dependencies:
     path: packages/authentication_repository
   bloc: ^8.0.2
   cloud_firestore: ^3.1.10
+  dashbook: ^0.1.8
   equatable: ^2.0.3
   firebase_auth: ^3.3.16
   firebase_core: ^1.15.0

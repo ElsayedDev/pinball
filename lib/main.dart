@@ -8,7 +8,7 @@ import 'package:platform_helper/platform_helper.dart';
 import 'package:share_repository/share_repository.dart';
 
 void main() {
-  bootstrap((firestore, firebaseAuth) async {
+  bootstrap((name, firestore, firebaseAuth) async {
     final leaderboardRepository = LeaderboardRepository(firestore);
     const shareRepository =
         ShareRepository(appUrl: ShareRepository.pinballGameUrl);

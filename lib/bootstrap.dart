@@ -25,7 +25,13 @@ typedef BootstrapBuilder = Future<Widget> Function(
   FirebaseAuth firebaseAuth,
 );
 
-Future<void> bootstrap(BootstrapBuilder builder) async {
+typedef BooBooBuilder = Future<Widget> Function(
+  String name,
+  FirebaseFirestore firestore,
+  FirebaseAuth firebaseAuth,
+);
+
+Future<void> bootstrap(BooBooBuilder builder) async {
   WidgetsFlutterBinding.ensureInitialized();
   FlutterError.onError = (details) {
     log(details.exceptionAsString(), stackTrace: details.stack);
@@ -36,6 +42,7 @@ Future<void> bootstrap(BootstrapBuilder builder) async {
       await BlocOverrides.runZoned(
         () async => runApp(
           await builder(
+            'Ahmed',
             FirebaseFirestore.instance,
             FirebaseAuth.instance,
           ),
