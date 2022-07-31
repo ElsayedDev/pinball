@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:authentication_repository/authentication_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -63,3 +65,19 @@ class App extends StatelessWidget {
     );
   }
 }
+
+// class MyX extends Struct {
+//   MyX() : super(
+
+//   );
+// // @Int32()
+// //   external int a;
+
+// //   @Float()
+// //   external double b;
+
+// //   external Pointer<Void> c;
+
+// }
+
+
